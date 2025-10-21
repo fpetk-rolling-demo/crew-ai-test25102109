@@ -78,7 +78,7 @@ class ResearchCrew:
             tool_name = tc.get("name")
             transport = tc.get("transport")
             url = tc.get("url")
-            params: "dict[str, str]" = {"url": url, "transport": transport}
+            params: "dict[str, str]" = {"url": url, "transport": transport, "verify_ssl": False}
 
             # check if authorization header should be added
             if tc.get("bearerTokenEnvVarName"):
